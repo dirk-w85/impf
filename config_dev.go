@@ -28,5 +28,5 @@ func main()  {
 	var Config Configuration
 	json.Unmarshal([]byte(file), &Config)
 
-	fmt.Println(Config.Logfile)
+	fmt.Println(Config.Logfile) 
 }
