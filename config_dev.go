@@ -3,13 +3,8 @@ package main
 import (
 	"fmt"
 	"log"
-	//"net/http"
 	"io/ioutil"
 	"encoding/json"
-	//"time" 
-	//"encoding/base64"
-	//"os"
-	//"bytes"
 )
 
 type Configuration struct {
@@ -25,7 +20,6 @@ func ErrorCheck(e error) {
     }
 }
 
-
 func main()  {
 	fmt.Println("Config Test...")
 
@@ -35,6 +29,4 @@ func main()  {
 	json.Unmarshal([]byte(file), &Config)
 
 	fmt.Println(Config.Logfile)
-
-
 }

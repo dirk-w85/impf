@@ -4,15 +4,9 @@ import (
 	"fmt"
 	"net/http"
 	"io/ioutil"
-	//"encoding/json"
-	//"os"
 	"log"
-	//"time"
-	//"strings"
 	"bytes"
 )
-
-
 
 func ErrorCheck(e error) {
     if e != nil {
@@ -21,11 +15,9 @@ func ErrorCheck(e error) {
     }
 }
 
-
 func main() {
 	url :="https://hooks.slack.com/services/"
 	client := &http.Client{}
-	//data := '{"text": "Hello, world."}'
 	req, err := http.NewRequest("POST", url, bytes.NewBufferString("{\"text\": \"TERMIN VERFÜGBAR - PLZ: 73730 Code: CHKK-2XAJ-9WNY Link: https://229-iz.impfterminservice.de/impftermine/suche/CHKK-2XAJ-9WNY/73730/\"}"))
 	ErrorCheck(err)
 
@@ -34,7 +26,6 @@ func main() {
 	resp, err := client.Do(req)
 	ErrorCheck(err)
 	defer resp.Body.Close()
-	//fmt.Println(resp.StatusCode)
 	body, err := ioutil.ReadAll(resp.Body)
 	ErrorCheck(err)
 	if resp.StatusCode < 300 {
@@ -42,6 +33,4 @@ func main() {
 	}else{
 		fmt.Println("{}")
 	}
-
-
 }
