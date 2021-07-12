@@ -1,0 +1,7 @@
+{
+    "Codes": ["LQASD-VT12-XV12"],
+    "Logfile": "/var/log/impf.log",
+    "SlackURL": "https://hooks.slack.com/",
+    "FromPLZ": 12345,
+    "ToPLZ": 56789
+}
