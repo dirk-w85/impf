@@ -47,10 +47,9 @@ func ErrorCheck(e error) {
 }
 
 func SendSlack (msg string){
-	url :="https://hooks.slack.com/services/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"
 	client := &http.Client{}
 	//data := '{"text": "Hello, world."}'
-	req, err := http.NewRequest("POST", url, bytes.NewBufferString("{\"text\": \""+msg+"\"}"))
+	req, err := http.NewRequest("POST", Config.Slackurl, bytes.NewBufferString("{\"text\": \""+msg+"\"}"))
 	ErrorCheck(err)
 
 	req.Header.Set("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36")
