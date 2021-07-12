@@ -1,7 +1,3 @@
-//https://hooks.slack.com/services/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
-//<@U5DQVTMRT> 
-
-
 package main
 
 import (
@@ -27,7 +23,7 @@ func ErrorCheck(e error) {
 
 
 func main() {
-	url :="https://hooks.slack.com/services/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"
+	url :="https://hooks.slack.com/services/"
 	client := &http.Client{}
 	//data := '{"text": "Hello, world."}'
 	req, err := http.NewRequest("POST", url, bytes.NewBufferString("{\"text\": \"TERMIN VERFÜGBAR - PLZ: 73730 Code: CHKK-2XAJ-9WNY Link: https://229-iz.impfterminservice.de/impftermine/suche/CHKK-2XAJ-9WNY/73730/\"}"))

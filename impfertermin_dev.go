@@ -56,9 +56,6 @@ func GetDates (resp string, Plz string, Code string) (){
 	}else{
 		log.Println("TERMIN VERFÜGBAR - PLZ: "+Plz+" Code: "+Code)
 	}
-
-
-
 }
 
 // ------------------
